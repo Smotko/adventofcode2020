@@ -2,7 +2,7 @@ import logging
 import math
 from collections import Counter
 
-from utils import get_input
+from .utils import get_input
 
 
 grid = """..##.......

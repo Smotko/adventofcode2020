@@ -1,4 +1,4 @@
-from utils import get_input, info
+from .utils import get_input, info
 
 
 def seat_id(seat):

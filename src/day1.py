@@ -1,5 +1,5 @@
 import logging
-from utils import get_int_input
+from .utils import get_int_input
 
 
 def run():
