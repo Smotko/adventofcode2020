@@ -1,8 +1,21 @@
 import requests
 import percache
 import os
+import logging
 
 cache = percache.Cache(".cache")
+
+
+def error(*args):
+    logging.error(args if len(args) > 1 else args[0])
+
+
+def warning(*args):
+    logging.warning(args if len(args) > 1 else args[0])
+
+
+def info(*args):
+    logging.info(args if len(args) > 1 else args[0])
 
 
 @cache

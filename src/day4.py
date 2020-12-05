@@ -1,7 +1,6 @@
-import logging
 import re
 
-from utils import get_input
+from utils import get_input, info
 
 
 passports = """pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980
@@ -81,5 +80,5 @@ def verify_passports(passports):
 
 
 def run():
-    logging.info(len(list(simple_verify(parse_passports()))))
-    logging.info(len(list(verify_passports(parse_passports()))))
+    info(len(list(simple_verify(parse_passports()))))
+    info(len(list(verify_passports(parse_passports()))))
