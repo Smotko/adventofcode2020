@@ -7,15 +7,15 @@ cache = percache.Cache(".cache")
 
 
 def error(*args):
-    logging.error(args if len(args) > 1 else args[0])
+    logging.error(args if len(args) > 1 else args[0], stacklevel=3)
 
 
 def warning(*args):
-    logging.warning(args if len(args) > 1 else args[0])
+    logging.warning(args if len(args) > 1 else args[0], stacklevel=3)
 
 
 def info(*args):
-    logging.info(args if len(args) > 1 else args[0])
+    logging.info(args if len(args) > 1 else args[0], stacklevel=3)
 
 
 @cache
