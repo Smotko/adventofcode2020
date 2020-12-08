@@ -23,7 +23,7 @@ def get_input(day):
     assert os.getenv(
         "AOC_SESSION"
     ), "Set the session cookie environment variable (export AOC_SESSION='your session cookie')"
-    print("Fetching from server")
+    warning("Fetching from server")
     result = requests.get(
         f"https://adventofcode.com/2020/day/{day}/input",
         cookies={"session": os.getenv("AOC_SESSION")},
