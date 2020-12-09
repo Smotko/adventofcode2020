@@ -1,3 +1,4 @@
+import pytest
 from .utils import *
 
 sample = """35
@@ -47,6 +48,7 @@ def contiguous_set(inp, goal):
                 return max(rng) + min(rng)
 
 
+@pytest.mark.skip("A bit slow")
 def run():
     assert preamble(5, sample) == 127
     nmbr = preamble(25, get_input(9))
