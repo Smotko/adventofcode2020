@@ -40,7 +40,7 @@ def preamble(cnt, sample):
 
 def contiguous_set(inp, goal):
     inp = [int(i) for i in inp]
-    for i, val in enumerate(inp):
+    for i in range(0, len(inp)):
         for cnt, _ in enumerate(inp[i:]):
             rng = inp[i : cnt + i]
             smm = sum(rng)
