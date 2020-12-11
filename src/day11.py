@@ -1,3 +1,4 @@
+import pytest
 from .utils import *
 
 sample = """L.LL.LL.LL
@@ -134,6 +135,7 @@ def simulate2(rows):
         cnt += 1
 
 
+@pytest.mark.skip("Too slow")
 def run():
 
     assert simulate(sample) == 37
