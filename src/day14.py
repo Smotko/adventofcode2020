@@ -33,7 +33,7 @@ def compute(lines):
 
 def replace_x(mask):
     if "X" not in mask:
-        yield mask
+        yield int(mask, 2)
     else:
         yield from replace_x(mask.replace("X", "0", 1))
         yield from replace_x(mask.replace("X", "1", 1))
@@ -52,8 +52,8 @@ def compute2(lines):
         val = int(val)
 
         mem &= int(mask.replace("0", "1").replace("X", "0"), 2)
-        for mask in replace_x(mask):
-            memory[int(mask, 2) | mem] = val
+        for m in replace_x(mask):
+            memory[m | mem] = val
     return sum(memory.values())
 
 
