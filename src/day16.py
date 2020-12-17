@@ -63,7 +63,6 @@ class Parser:
             except:
                 break
             parsed.add(val)
-            info(pos, val, self.my_ticket[pos])
             if "departure" in val:
                 ssm *= self.my_ticket[pos]
 
