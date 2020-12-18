@@ -12,6 +12,7 @@ percache = "*"
 pytest = "*"
 pytest-watch = "*"
 black = "*"
+ply = "*"
 
 [requires]
 python_version = "3.9"
