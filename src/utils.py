@@ -19,7 +19,7 @@ def info(*args):
 
 
 @cache
-def get_input(day):
+def get_input(day, no_split=False):
     assert os.getenv(
         "AOC_SESSION"
     ), "Set the session cookie environment variable (export AOC_SESSION='your session cookie')"
@@ -28,6 +28,8 @@ def get_input(day):
         f"https://adventofcode.com/2020/day/{day}/input",
         cookies={"session": os.getenv("AOC_SESSION")},
     )
+    if no_split:
+        return result.text
     return result.text.splitlines()
 
 
